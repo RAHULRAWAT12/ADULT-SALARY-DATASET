@@ -1,0 +1,30 @@
+---
+title: "EDA ON ADULT DATASET"
+author: "RAHUL RAWAT"
+date: "2022-09-07"
+output: html_document
+---
+  
+## importing the data 
+```{r}
+##LOAD REQUIRED LIBRARIES #
+library(stats)
+library(dplyr)
+
+#LOAD THE DATA ONTO mydata OBJECT#
+data = read.csv("adult.csv",header = TRUE)
+head(data,10)
+str(data)
+dim(data)
+glimpse(data)
+
+# 1.DATA SUMMARIZATON
+library(Hmisc)
+describe(data)
+summary(data)
+library(skimr)
+skim(data)
+
+library(DataExplorer)
+DataExplorer::create_report(data)
+```
